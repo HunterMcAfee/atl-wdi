@@ -16,24 +16,47 @@ Please do not use any resource other than the class wiki
 to answer these questions.
 
 1.  What are the three requirements for completing this course?
+    i.  Homework submission needs to be at 80% or higher
+    ii.  Attendance must be consistent (please see the Attendance Policy)
+    iii.  All unit projects need to be submitted and presented to the intstructional team and should meet project rubric expectations
 2.  At what URL can you find a series of videos covering the terminal, created
     by one of GA's senior instructors?
+    https://www.youtube.com/playlist?list=PLdnONIhPScSToZztXRHyKZTQEsE30luMx
 3.  What book by Douglas Crockford is on our recommended reading list?
+    Javascript the Good Parts
 4.  According to our Git style guide, when writing the detailed description of
     a commit in its commit message, what three types of things are most
     important to mention?
+    - Why the change is needed
+    - How it addresses the issue
+    - What side-effects it might have
+
 5.  What does a bug report need to have before it can be submitted to the bug
     journal?
+    - Copy the error message
+    - Copy the code in question
+    - Write a paragraph explaining:
+        * What you thought the error was
+        * What the issue turned out to be
+        * How you solved it
 6.  There are three Git tutorials referenced in the Wiki. What are they?
+    - Atlassian Git Tutorials
+    - Try GitHub (https://try.github.io/)
+    - Explain Git with D3http://onlywei.github.io/explain-git-with-d3
 7.  List at least two basic UI styling tips that will help your projects
     look good.
+    - Don't use true black
+    - Add white space
 8.  What is the maximum number of absences a student can have, and how many
     'tardies' are equal to an absence?
+    - No more than two absences
+    - Two tardies equal one absence
 9.  Where can you find a directory of publicly-accessible APIs?
     Give at least one URL.
+    - https://www.programmableweb.com/apis/directory
 10. What two holidays will we have during this course (not counting the long
     winter break)?
-
+    - July 3rd and 4th, September 1st
 ## Submitting Your Work
 
 When you're ready, create an issue on the class repo with
