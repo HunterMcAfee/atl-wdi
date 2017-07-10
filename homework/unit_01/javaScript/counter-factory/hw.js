@@ -49,11 +49,21 @@ const CounterCollection = {
 const Presenter = {
   insertCounterComponent: function(newCountId){
     console.log(`insert counter component #${newCountId}`);
-    // Your Code Here
+    var newCounter = document.createElement("div");
+    newCounter.className = "counter";
+    newCounter.dataset.countId = newCountId;
+    newCounter.innerHTML = "<h3>Count: <span>0</span></h3><button class='increment'> + 1 </button>";
+    newCounter.getElementsByClassName("increment")[0].addEventListener('click', AppController.onClickIncrement);
+    document.getElementById("counter-list").appendChild(newCounter);
   },
   refreshCounterComponent: function(countId){
     console.log(`refresh counter component #${countId}`);
-    // Your Code Here
+    var counterValue = CounterCollection.getCounterValue(countId);
+    var stringCountId = countId;
+    stringCountId = stringCountId.toString();
+    // var currentCounter = document.querySelector(`[data-count-id="${countId}"]`);  Using modern concatenation
+    var currentCounter = document.querySelector("[data-count-id='" + countId + "']");
+    currentCounter.getElementsByTagName("span")[0].innerHTML = counterValue;
   },
   removeCounterComponent: function(countId){             // REACH
     console.log(`remove counter component #${countId}`);
@@ -64,10 +74,13 @@ const Presenter = {
 // Top-Level Application Control //
 const AppController = {
   onClickNewCounter: function(event){
-    // Your Code Here
+    CounterCollection.createCounter();
+    Presenter.insertCounterComponent(CounterCollection.lastCountId);
   },
   onClickIncrement: function(event){
-    // Your Code Here
+    var countId = Number(event.target.parentNode.dataset.countId);
+    CounterCollection.incrementCounter(countId);
+    Presenter.refreshCounterComponent(countId);
   },
   onClickDelete: function(event){                           // REACH
     // Your Code Here
