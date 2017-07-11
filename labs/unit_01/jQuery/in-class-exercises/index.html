@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
 </head>
+
 <body>
 
+  <h1>Counters:</h1>
+  <div id="counter-container"></div>
 
+  <div>
+    <h1>Add a New Counter</h1>
+    <form>
+      <div>
+        <label for="new-counter-name">New Counter Name: </label>
+        <input name="new-counter-name" type="text" id="new-counter-name" placeholder="New counter name" name="new-counter-name">
+      </div>
+      <div>
+        <label for="new-counter-start-value">New Counter Start Value: </label>
+        <input type="number" id="new-counter-start-value" placeholder="Starting value for new counter" name="new-counter-start-value">
+      </div>
+      <div><button id="add-new-counter">Submit</button></div>
+    </form>
+  </div>
+
+
+  <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
   <script src="scripts/script.js"></script>
 </body>
+
 </html>
