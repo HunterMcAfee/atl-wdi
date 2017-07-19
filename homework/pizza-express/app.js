@@ -1,21 +1,20 @@
 const express = require('express');
-const hbs = require('abs');
+const hbs = require('hbs');
 
 const app = express();
 app.set('view engine', 'hbs');
 app.set('views', './views');
 
-app.get('/', (req, res) => {
-    res.send('Welcome to Pizza Express!')
-});
+app.use(express.static(__dirname + '/public'));
 
-app.get ('/topping/:type', (req, res, next) => {
-    res.send(`${req.params.type} pizza! Good choice.`)
-});
+const welcomeController = require('./controllers/welcome_controller')
+app.use('/', welcomeController);
 
-app.get ('/order/:amount/:size', (req, res, next) => {
-    res.send(`Your order for ${req.params.amount} ${req.params.size} pizzas will be ready in 1 minute!`)
-});
+const toppingController = require('./controllers/topping_controller')
+app.use('/topping', toppingController);
+
+const orderController = require('./controllers/order_controller');
+app.use('/order', orderController);
 
 const port = 3000;
 app.listen(port, function(){
