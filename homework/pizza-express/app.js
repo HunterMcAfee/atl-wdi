@@ -1,5 +1,9 @@
 const express = require('express');
+const hbs = require('abs');
+
 const app = express();
+app.set('view engine', 'hbs');
+app.set('views', './views');
 
 app.get('/', (req, res) => {
     res.send('Welcome to Pizza Express!')
