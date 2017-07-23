@@ -1,0 +1,13 @@
+<h1>Edit Pirate</h1>
+<form method='POST' action='/pirates/{{id}}?_method=PUT'>
+<ul>
+    <li>Name: <input type='text' name='name' value='{{data.name}}'></li>
+    <li>Birthplace: <input type='text' name='birthplace' value='{{data.birthplace}}'></li>
+    <li>Year of Death: <input type='text' name='death_year' value='{{data.death_year}}'></li>
+    <li>Based in: <input type='text' name='base' value='{{data.base}}'></li>
+    <li>Nickname: <input type='text' name='nickname' value='{{data.nickname}}'></li>
+</ul>
+<button>Submit</button>
+</form>
+<br>
+<a href='/pirates/{{id}}'>Go back</a>

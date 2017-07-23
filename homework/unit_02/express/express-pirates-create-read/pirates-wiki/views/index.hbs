@@ -1,6 +1,9 @@
 <ul>
     {{#each data}}
     <li><a href='/pirates/{{@index}}'>{{name}}</a></li>
+    <form method='POST' action='/pirates/{{@index}}?_method=DELETE'>
+    <button>Delete</button>
+    </form>
     {{/each}}
 </ul>
 <a href='/pirates/new'>Create a new pirate.</a>
