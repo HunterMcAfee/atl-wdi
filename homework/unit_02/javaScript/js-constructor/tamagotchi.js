@@ -1,9 +1,9 @@
 console.log('tamagotchi file is loaded');
 
 //your class declaration here
-class Tamagotchi {
+class tamagotchi {
     constructor (name, creatureType) {
-        this.propertyName = name;
+        this.name = name;
         this.creatureType = creatureType;
         this.foodInTummy = 10;
         this.restedness = 10;
@@ -11,7 +11,7 @@ class Tamagotchi {
     }
     cry () {
         this.foodInTummy--;
-        console.log(`${this.propertyName} is crying. WAHH!!!`);
+        console.log(`${this.name} is crying. WAHH!!!`);
     }
     puke () {
         this.foodInTummy--;
@@ -19,18 +19,18 @@ class Tamagotchi {
     }
     yawn () {
         this.restedness--;
-        console.log(`${this.propertyName} has current restedness of: ${this.restedness}`);
+        console.log(`${this.name} has current restedness of: ${this.restedness}`);
     }
 }
 
 //create new Tamagotchis
-let david = new Tamagotchi("David", "Snail");
-let richard = new Tamagotchi("Richard", "Gas Monkey");
-david.cry()
-david.puke()
-david.yawn();
-richard.cry()
-richard.puke()
-richard.yawn();
+let speedy = new tamagotchi("Speedy", "Snail");
+let richy = new tamagotchi("Richy", "Gas Monkey");
+speedy.cry()
+speedy.puke()
+speedy.yawn();
+richy.cry()
+richy.puke()
+richy.yawn();
 
 //test out your Tamagotchies below via console.logs

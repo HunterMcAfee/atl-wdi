@@ -15,3 +15,7 @@ var player = {
     console.log(tamagotchi.name + ' got some Zzzzs! Restedness: ' + tamagotchi.restedness);
   }
 }; //end player
+
+player.feedTamagotchi(speedy);
+player.medicateTamagotchi(speedy);
+player.knockOutTamagotchi(speedy);
