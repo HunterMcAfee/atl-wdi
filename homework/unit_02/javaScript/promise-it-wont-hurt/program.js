@@ -2,9 +2,9 @@
 
 var promise = new Promise(function (fulfill, reject) {
     setTimeout(function () {
-        onReject(error);}, 300);
+        reject(new Error('REJECTED!'))}, 300);
     function onReject(error) {
-        return reject("REJECTED!")
+        console.log(error.message);
     }
 });
     
@@ -12,6 +12,4 @@ promise
     // .then(function (fulfill) {
     //     return console.log("FULFILLED!");
     // })
-    .then(function (error) {
-        return console.log(error);
-    });
+    .then(null, onReject);
