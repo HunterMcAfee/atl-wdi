@@ -30,7 +30,46 @@ entities/abstractions (e.g. Senior Paws app, above) that the app might use, and 
 This app provides easy access to all your e-mail service providers in one app. The app will let you select one of your email addresses and view your e-mails for that address.
 
 ```
-Write your answer here or in a separate js file.
+USER
+- Account User Name
+- First Name
+- Last Name
+- Password
+- Phone
+- Address
+- Emails
+
+EMAIL
+- Email Domain
+- Email
+- Password
+- Inbox
+- Outbox
+- Sent
+- Draft
+- Archive
+
+var user {
+  accountName: string,
+  firstName: string,
+  lastName: string,
+  password: string
+  phone: sumber,
+  address: string,
+  emailAccounts: [{..}],
+}
+
+var emailAccount {
+  domain: string,
+  emailUserName: string,
+  password: string,
+  inbox: [{..},{..}]
+  outbox: [{..},{..}]
+  sent: [{..},{..}]
+  draft: [{..},{..}]
+  archive: [{..},{..}],
+}
+Relationship would be email accounts being listed inside of user.
 ```
 
 ### 2. Radio on the Internet app
@@ -39,7 +78,33 @@ This app hosts a ton of radio stations, each featuring their own playlists of so
 
 
 ```
-Write your answer here or in a separate js file.
+STATION
+- name
+- genres
+- frequency
+- popularity
+- playlists
+
+PLAYLIST
+- type
+- song list
+- genre
+
+var station {
+  name: string,
+  genres: [string, string...],
+  frequency: number,
+  popularity: number,
+  playlists: [{..}, {..}]
+}
+
+var playlist {
+  type: string,
+  songList: [string, string,...],
+  genre: string
+}
+
+Relationship would be playlist being nested inside of the station object.
 ```
 
 ### 3. Rock Concert App
@@ -47,19 +112,105 @@ Write your answer here or in a separate js file.
 This app will be a tool for managing all of your favorite bands' concerts; it will keep track of their tour dates, ticket purchasing, and next recommended show.
 
 ```
-Write your answer here or in a separate js file.
+USER
+- account name
+- password
+- email
+- bands
+- tickets
+
+BAND
+- name
+- tour dates
+- ticket pricing
+
+var user {
+  accountName: string,
+  password: string,
+  email: string,
+  bands: [{...}, {...}],
+  tickets: [{..}, {..}]
+}
+
+var band {
+  name: string,
+  tourDates: [{..}, {...}],
+  ticketPricing: number
+}
+Relationship: Bands could be listed inside user object
 ```
 
 ### 4. Coffee To-Go App
 
 This app will allow customers to browse a list of coffeeshops nearby, order drinks off of their menu, add those drinks to a shopping cart, and save that cart as a past order once the purchase is complete.
 
+```
+Coffeeshop
+- name
+- address
+- phone number
+- menu
+- orders
+- customers
+
+Customer
+- name
+- address
+- phone number
+- credit card information
+- shopping cart
+- past cart orders
+
+var coffeeshop {
+  name: string,
+  address: string,
+  phoneNumber: number
+  menu: [{..},{...}]
+  orders: {{...}, {...}}
+  customers: [string, string...]
+}
+
+var customer {
+  name: string,
+  address: string,
+  phoneNumber: string,
+  creditCard: {},
+  shoppingCart: [{..},{..}],
+  pastCart: [{..}, {..}]
+}
+Relatonship: customer could pass in orders to the coffeeshop orders list
+
+```
 ### 5. Team Tracker App
 
 This app shows you all the latest stats from your favorite sports teams. You can view individual player stats and full team stats.
 
 ```
-Write your answer here or in a separate js file.
+TEAM
+- name
+- city
+- stats
+- player roster
+
+PLAYER
+- first name
+- last name
+- number
+- stats
+
+var team {
+  name: string,
+  city: string,
+  stats: {},
+  playerRoster: [{...},{...}]
+}
+
+var player {
+  firstName: string,
+  lastName: string,
+  number: number,
+  stats: {}
+}
 ```
 
 
@@ -68,7 +219,7 @@ Write your answer here or in a separate js file.
 Q. When you were creating relationships between the models, what were some thoughts or questions you had to help guide a connection between them?
 
 ```
-Write your answer here or in a separate js file.
+For determining the relationship between the models, I tried to picture how each model would fit in a hierarchy.  In other words, which model would I value more intially that could incapsulate the other.
 ```
 
 ### Reading and Videos for Tomorrow
