@@ -29,8 +29,8 @@ app.use( logger('dev'));
 // CONTROLLERS
 //======================
 //for seed file, seed the database
-// var seedController = require('./controllers/seeds.js');
-// app.use('/seed', seedController);
+var seedController = require('./controllers/seeds.js');
+app.use('/seed', seedController);
 
 //for root directory, show all donuts
 // var donutsController = require('./controllers/donuts.js');
@@ -54,6 +54,6 @@ db.once('open', function() {
   console.log("Database has been connected!");
 });
 
-app.listen(4000, function(){
+app.listen(3000, function(){
   console.log("App is listening on port 4000");
 });
