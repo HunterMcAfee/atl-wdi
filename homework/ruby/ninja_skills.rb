@@ -41,11 +41,25 @@
 # print "#{name} likes to #{likes_to_do}."
 
 # CHALLENGE SIX
-myFirstArray = []
-myFirstArray = ["this", "is", "an", "array", "son", 1, 2, 3, 4]
-puts myFirstArray.last
-puts myFirstArray.first
-myFirstArray[1] = "Joe"
-myFirstArray[2] = 3
-myFirstArray.push(true)
-puts myFirstArray[3].class
+# myFirstArray = []
+# myFirstArray = ["this", "is", "an", "array", "son", 1, 2, 3, 4]
+# puts myFirstArray.last
+# puts myFirstArray.first
+# myFirstArray[1] = "Joe"
+# myFirstArray[2] = 3
+# myFirstArray.push(true)
+# puts myFirstArray[3].class
+
+# CHALLENGE SEVEN
+myFavoriteAnimals = {
+    "Edgar" => "Donkey",
+    "Chester" => "Cheetah",
+    "Bruce" => "Shark",
+    "Baloo" => "Bear",
+    "Oscar" => "Penguin"
+}
+
+myFavoriteAnimals["Edgar"] = "Bear"
+favoriteMovie = {}
+favoriteMovie = {"movie" => "The Dark Knight"}
+
