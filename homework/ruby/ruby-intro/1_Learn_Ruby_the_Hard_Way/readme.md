@@ -99,14 +99,16 @@ Please answer the following questions in the spaces provided.
 1.  How do you write an `if` statement in Ruby?
 
   ```ruby
-    # your answer here
+    if blah > blah
+      puts "Blah"
+    end
   ```
 
 2.  Please write code that would take the string "007", reverse it,
     and return the integer `700`.
 
   ```ruby
-    # your answer here
+    "007".reverse!.to_i
   ```
 
 3.  Please write code that takes the array `[23,56,3,7]`, sorts it,
@@ -114,37 +116,47 @@ Please answer the following questions in the spaces provided.
     (i.e. modifying the original array, rather than returning a new array).
 
   ```ruby
-    # your answer here
+    example = [23,56,3,7]
+    example = example.sort!.reverse!
   ```
 
 3.  What does an exclamation point at the end of a method name usually signify?
 
   ```text
-    Your answer here:
+  If a method has an exclamation point at the end of the method name, then it will modify the object/variable/array that it is being called upon.
   ```
 
 4.  What does a question mark and the end of a method name usually signify?
 
   ```text
-    Your answer here:
+    A method with a question mark at the end signifies that it will return with a boolean value.
   ```
 
 5.  How do you define a method in Ruby? Give a simple example.
 
   ```ruby
-    # your answer here
+    def greeting(word)
+      puts "Hello #{word}"
+    end
   ```
 
 6.  How do you create a class in Ruby? Give a simple example.
 
   ```ruby
-    # your answer here
+    class Greeting
+      def greet
+        return "Hello peoples"
+      end
+    end
   ```
 
 7. Please give an example of how iteration can be performed in Ruby.
 
   ```ruby
-    # your answer here
+    example = [23,56,3,7]
+    example.each do |number|
+      puts "#{number}"
+    end
   ```
 
 8.  If I modify a class in Ruby by adding a method, will instances of that class
@@ -152,5 +164,5 @@ Please answer the following questions in the spaces provided.
     Please explain why.
 
   ```text
-    Your answer here:
+    Yes, because any objects that are created are referenced to that class, therefore they can call upon that new method.
   ```
